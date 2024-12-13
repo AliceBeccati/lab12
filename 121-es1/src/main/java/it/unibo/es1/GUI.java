@@ -2,10 +2,9 @@ package it.unibo.es1;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
-import javax.swing.*;
-
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.*;
 
 
 public class GUI extends JFrame{

@@ -20,7 +20,7 @@ public class Test {
 	 */
 	
 	public static void main(String[] args){
-		new GUI(4);
+		GUI gui = new GUI(4);
 	}
 
 }
