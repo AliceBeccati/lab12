@@ -9,7 +9,7 @@ import javax.swing.*;
 
 public class GUI extends JFrame {
     
-    private Map<Pair<Integer,Integer>,JButton> cells = new HashMap<>();
+    private final Map<Pair<Integer,Integer>,JButton> cells = new HashMap<>();
     private final JButton skip = new JButton(">>>");
     Logic logic;
     
@@ -23,8 +23,8 @@ public class GUI extends JFrame {
         this.getContentPane().add(BorderLayout.CENTER,panel);
         this.getContentPane().add(BorderLayout.SOUTH,panelSkip);
         ActionListener al = e -> {
-            update(logic.advance(cells));
-            if(logic.toQuit(cells)){
+            update(logic.advance(cells.keySet().stream().toList()));
+            if(logic.toQuit()){
                 System.exit(0);
             }
         };
